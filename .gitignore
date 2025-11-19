@@ -1,0 +1,90 @@
+# ============================================
+# PYTHON
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Packages
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+
+# ============================================
+# ENVIRONMENT
+# ============================================
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+
+# Environment variable files
+.env
+*.env
+.env.*
+
+
+# ============================================
+# DJANGO
+# ============================================
+# Logs
+*.log
+
+# SQLite DB (agar Postgres ishlatsang, sqlite ignore qilinadi)
+db.sqlite3
+db.sqlite3-journal
+
+# Static & media (collectstatic ishlatiladi)
+staticfiles/
+static/
+media/
+
+# Local settings
+local_settings.py
+
+# ============================================
+# Migrations
+# ============================================
+
+*/migrations/__pycache__/
+
+
+# ============================================
+# IDE & EDITOR SETTINGS
+# ============================================
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# JetBrains
+*.iml
+
+
+# ============================================
+# OPERATING SYSTEM FILES
+# ============================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
