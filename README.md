@@ -1,40 +1,46 @@
-##🌐 Blog Project
+## 🌐 Blog Project
 
-Django yordamida yaratilgan oddiy va funksional blog tizimi. Postlarni yaratish, ko‘rish, tahrirlash va o‘chirish uchun minimal backend asoslari o‘rgatilgan loyiha. <hr>
+Django yordamida yaratilgan oddiy va funksional blog tizimi.  
+Postlarni yaratish, ko‘rish, tahrirlash va o‘chirish uchun minimal backend asoslari o‘rgatilgan loyiha.
 
-✨ Xususiyatlar
+---
 
-📝 Post yaratish
+## ✨ Xususiyatlar
 
-📄 Postlarni ko‘rish
+- 📝 Post yaratish  
+- 📄 Postlarni ko‘rish  
+- ✏️ Postlarni tahrirlash  
+- 🗑️ Postlarni o‘chirish  
+- 🔐 Django Admin paneli  
 
-✏️ Postlarni tahrirlash
+---
 
-🗑️ Postlarni o‘chirish
+## ⚙️ O‘rnatish
 
-🔐 Django Admin paneli<hr>
-
-⚙️ O‘rnatish
-git clone <repo-link>
+```bash
+git clone https://github.com/ziyodaxonjabborova/blog_project.git
 cd blog_project
 
 python -m venv venv
-venv\Scripts\activate   # Windows
+venv\Scripts\activate    # Windows
 
 pip install -r requirements.txt
 
 python manage.py migrate
-python manage.py runserver<hr>
+python manage.py runserver
+```
 
-🧰 Texnologiyalar
+---
 
-🐍 Python
+## 🧰 Texnologiyalar
 
-🎯 Django framework
+- 🐍 Python  
+- 🎯 Django framework  
+- 🗄️ SQLite (standart DB)
 
-🗄️ SQLite (standart DB) <hr>
+---
 
-👩‍💻 Muallif
+## 👩‍💻 Muallif
 
-Ziyodaxon Jabborova
+**Ziyodaxon Jabborova**  
 GitHub: https://github.com/ziyodaxonjabborova
