@@ -1,7 +1,7 @@
 ## 🌐 Blog Project
 
 Django yordamida yaratilgan oddiy va funksional blog tizimi.  
-Postlarni yaratish, ko‘rish, tahrirlash va o‘chirish uchun minimal backend asoslari o‘rgatilgan loyiha.
+Postlarni yaratish, ko‘rish, tahrirlash va o‘chirish (CRUD) uchun minimal backend asoslari o‘rgatilgan loyiha.
 
 ---
 
