@@ -53,9 +53,13 @@
 </head>
 <body>
     <div class="box">
-        <h3>Haqiqatan ham bu postni o‘chirmoqchimisiz?</h3>
-        <a href="posts.html" class="btn btn-cancel">Bekor qilish</a>
-        <a href="posts.html" class="btn btn-delete">O‘chirish</a>
+        <h3>Haqiqatan ham <b>"{{ post.title }}"</b> postini o‘chirmoqchimisiz?</h3>
+
+        <form method="POST">
+            {% csrf_token %}
+            <a href="{% url 'detail' post.pk %}" class="btn btn-cancel">Bekor qilish</a>
+            <button class="btn btn-delete" type="submit">O‘chirish</button>
+        </form>
     </div>
 </body>
 </html>

@@ -82,17 +82,15 @@
   </nav>
 
   <div class="container">
-    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900" class="post-img">
+    <img src="{{post.image.url}}" class="post-img">
     <div class="content">
-      <div class="title">Okean siri: Tubsiz dengizlar hayoti</div>
-      <div class="date">22-oktabr, 2025</div>
-      <div class="text">
-        Okeanlar — bu dunyoning eng katta va eng sirli joylaridan biridir...
-      </div>
+      <div class="title">{{post.title}}</div>
+      <div class="date">{{post.created_at|date:"d-F Y"}}</div>
+      <div class="text">{{post.desc}}</div>
       <div class="actions">
-        <a href="posts.html" class="btn btn-back">← Orqaga</a>
-        <a href="edit_post.html" class="btn btn-edit">✏️ Tahrirlash</a>
-        <a href="delete_post.html" class="btn btn-delete">🗑️ O‘chirish</a>
+        <a href="{% url 'home' %}" class="btn btn-back">← Orqaga</a>
+        <a href="{% url 'update' post.id %}" class="btn btn-edit">✏️ Tahrirlash</a>
+        <a href="{% url 'delete' post.id %}" class="btn btn-delete">🗑️ O‘chirish</a>
       </div>
     </div>
   </div>

@@ -212,6 +212,7 @@
             <li><a href="#">Bloglar</a></li>
             <li><a href="#">Biz haqimizda</a></li>
             <li><a href="#">Aloqa</a></li>
+            <li><a href="{% url 'create' %}">Post Qo‘shish</a></li>
         </ul>
     </nav>
 
@@ -224,38 +225,27 @@
     <!-- POSTS -->
     <div class="container">
         <div class="posts">
-
+            
+            {% for post in posts %}
             <div class="post">
-                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900" alt="Post image">
+                {% if post.image %}
+                <img style="height:300px;" src="{{ post.image.url }}" alt="Post image">
+                {% endif %}
                 <div class="post-content">
-                    <div class="post-title">Okean siri: Tubsiz dengizlar hayoti</div>
-                    <div class="post-date">22-oktabr, 2025</div>
-                    <div class="post-desc">Okean tubida hali inson kashf etmagan minglab mavjudotlar yashaydi. Ularning yashash usuli esa butunlay boshqacha.</div>
-                    <a href="#" class="read-more">Ko‘proq o‘qish →</a>
+                    <div class="post-title">{{ post.title }}</div>
+                    <div class="post-date">{{ post.created_at|date:"d-F Y" }}</div>
+                    <div class="post-desc">{{ post.desc }}</div>
+                    <a href="{% url 'detail' post.pk %}" class="read-more">Ko‘proq o‘qish →</a>
                 </div>
             </div>
-
-            <div class="post">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900" alt="Post image">
-                <div class="post-content">
-                    <div class="post-title">Sun’iy intellekt – kelajak bugun</div>
-                    <div class="post-date">20-oktabr, 2025</div>
-                    <div class="post-desc">AI hozirda tibbiyotdan tortib, ta’limgacha bo‘lgan ko‘plab sohalarda inqilob yasamoqda. Ammo bu imkoniyatlar bilan birga xavflarni ham keltiradi.</div>
-                    <a href="#" class="read-more">Ko‘proq o‘qish →</a>
-                </div>
-            </div>
-
-            <div class="post">
-                <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?w=900" alt="Post image">
-                <div class="post-content">
-                    <div class="post-title">Tabiat va tinchlik</div>
-                    <div class="post-date">19-oktabr, 2025</div>
-                    <div class="post-desc">Tabiat insonga ruhiy tinchlik beradi. Daraxtlar, suvlar, shamol tovushi — bular hayotning tabiiy musiqasidir.</div>
-                    <a href="detail_post.html" class="read-more">Ko‘proq o‘qish →</a>
-                </div>
-            </div>
-
+            {% endfor %}
+    
         </div>
+    </div>
+    
+
+
+
 
         <!-- PAGINATION -->
         <div class="pagination">

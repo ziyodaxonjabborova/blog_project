@@ -53,11 +53,22 @@
     </style>
 </head>
 <body>
-    <form>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
         <h2>Postni tahrirlash</h2>
-        <input type="text" placeholder="Sarlavha" value="Oldingi sarlavha">
-        <textarea rows="5" placeholder="Matn">Oldingi matn shu yerda...</textarea>
+
+        <label>Sarlavha:</label>
+        <input type="text" name="title" value="{{ post.title }}">
+
+        <label>Matn:</label>
+        <textarea rows="5" name="desc">{{ post.desc }}</textarea>
+
+        <label>Rasmni o‘zgartirish (ixtiyoriy):</label>
+        <input type="file" name="image">
+
         <button type="submit">Saqlash</button>
     </form>
+
 </body>
 </html>
