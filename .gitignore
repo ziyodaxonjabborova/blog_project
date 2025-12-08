@@ -1,90 +1,163 @@
-# ============================================
-# PYTHON
-# ============================================
+# ======================================================
+# PYTHON / GENERAL
+# ======================================================
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
-
-# Packages
+*.pyd
+*.pyo
 *.egg
 *.egg-info/
 dist/
 build/
-eggs/
-parts/
-var/
-sdist/
 wheels/
-pip-wheel-metadata/
-share/python-wheels/
+*.manifest
+*.spec
 
-# ============================================
-# ENVIRONMENT
-# ============================================
-venv/
-env/
-.venv/
-ENV/
-env.bak/
-
-# Environment variable files
-.env
-*.env
-.env.*
-
-
-# ============================================
-# DJANGO
-# ============================================
-# Logs
-*.log
-
-# SQLite DB (agar Postgres ishlatsang, sqlite ignore qilinadi)
+# ======================================================
+# DJANGO CORE
+# ======================================================
+# Local DB
 db.sqlite3
-db.sqlite3-journal
+*.sqlite3
 
-# Static & media (collectstatic ishlatiladi)
-staticfiles/
-static/
-media/
-
-# Local settings
-local_settings.py
-
-# ============================================
-# Migrations
-# ============================================
-
+# Migrations cache (keep __init__.py)
 */migrations/__pycache__/
+*/migrations/*.pyc
+!*/migrations/__init__.py
 
+# ======================================================
+# STATIC & MEDIA MANAGEMENT
+# ======================================================
+# DO NOT ignore: static/
+# (source CSS/JS/images — must be version controlled)
 
-# ============================================
-# IDE & EDITOR SETTINGS
-# ============================================
+# Ignore Django build output
+staticfiles/
+static_root/
 
-# VSCode
+# User-uploaded files (never commit)
+media/
+media_root/
+uploads/
+
+# ======================================================
+# LOGS
+# ======================================================
+*.log
+logs/
+logging/
+gunicorn.log
+gunicorn.pid
+
+# ======================================================
+# SETTINGS (SENSITIVE)
+# ======================================================
+.env
+.env.*
+*.env
+*.key
+*.secret
+config/local_settings.py
+settings_local.py
+settings_dev.py
+settings_debug.py
+settings_production.py
+*.local.py
+
+# ======================================================
+# VIRTUAL ENVS
+# ======================================================
+env/
+venv/
+ENV/
+.venv/
+.conda/
+
+# ======================================================
+# EDITOR / IDE
+# ======================================================
 .vscode/
-
-# PyCharm
 .idea/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
 
-# JetBrains
 *.iml
+*.ipr
+*.iws
+out/
 
-
-# ============================================
-# OPERATING SYSTEM FILES
-# ============================================
-# macOS
+# ======================================================
+# OS JUNK FILES
+# ======================================================
 .DS_Store
-.AppleDouble
-.LSOverride
-
-# Windows
 Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# Linux
+*.swp
 *~
+.trash/
+
+# ======================================================
+# TESTING / COVERAGE
+# ======================================================
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# ======================================================
+# NODE / FRONTEND OPTIONAL
+# (if project uses React/Vue build inside)
+# ======================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.tsbuildinfo
+
+# ======================================================
+# DOCKER
+# ======================================================
+docker/
+docker-compose.override.yml
+docker-compose.local.yml
+*.pid
+
+# Docker volumes
+data/
+volumes/
+
+# ======================================================
+# CACHE / TEMP
+# ======================================================
+.cache/
+tmp/
+temp/
+*.tmp
+*.bak
+*.old
+
+# ======================================================
+# JUPYTER
+# ======================================================
+.ipynb_checkpoints/
+
+# ======================================================
+# CI/CD SYSTEM FILES
+# ======================================================
+.github/
+.gitlab/
+*.retry
+
+# ======================================================
+# ARCHIVES
+# ======================================================
+*.tar.gz
+*.zip
+*.7z
